@@ -39,7 +39,6 @@ const createAssistant = async (req, res) => {
 // UPDATE
 const updateAssistant = async (req, res) => {
 
-
     const user = await User.findOne({ _id: req?.body?.user_id} );
 
     if(!user) return res.status(404).json("User not found");
@@ -236,6 +235,7 @@ const getAssistants = async (req, res) => {
         res.status(403).json("You are not allowed!");
     }
 }
+
 
 module.exports = {
     createAssistant,

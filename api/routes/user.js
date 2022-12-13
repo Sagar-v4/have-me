@@ -18,4 +18,5 @@ router.get("/:id", getUser);
 // GET ALL
 router.get("/:id/all", getUsers);
 
+
 module.exports = router;

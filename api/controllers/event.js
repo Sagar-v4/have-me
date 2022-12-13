@@ -154,11 +154,13 @@ const getEvent = async (req, res) => {
 // GET
 const getEventQR = async (req, res) => {
 
+    console.log("QR");
     const event = await Event.findOne({code: req.params.id});
     if (!event) return res.status(404).json("Event not found!");
 
     try {
         res.status(200).json(event._doc);
+        // return res;
     } catch (err) {
         res.status(500).json(err);
     }
@@ -229,6 +231,7 @@ const getEvents = async (req, res) => {
         res.status(403).json("You are not allow to delete!");
     }
 }
+
 
 module.exports = {
     createEvent,

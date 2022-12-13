@@ -82,6 +82,7 @@ Object.assign(eventSchema.statics, {
     eventModes,
 });
 
+
 //Compile the schema into models
 module.exports = mongoose.model('Event', eventSchema);
 // module.exports = mongoose.model('Selection', selectionSchema);

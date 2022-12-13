@@ -72,5 +72,6 @@ const presenceSchema = new mongoose.Schema(
     }
 );
 
+
 //Compile the schema into models
 module.exports = mongoose.model('Presence', presenceSchema);

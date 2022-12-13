@@ -121,5 +121,6 @@ Object.assign(userSchema.statics, {
 //     entrants.find({ pincode: { $ne: null } })
 // };
 
+
 //Compile the schema into models
 module.exports = mongoose.model('User', userSchema);

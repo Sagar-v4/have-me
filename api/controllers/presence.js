@@ -177,6 +177,7 @@ const getEventPresences = async (req, res) => {
     // }
 }
 
+
 module.exports = {
     createPresence,
     updatePresence,

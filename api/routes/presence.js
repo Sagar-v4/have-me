@@ -28,4 +28,5 @@ router.get("/:id/user", getUserPresences);
 // GET ALL PRESENCE OF EVENT
 router.get("/:id/event", getEventPresences);
 
+
 module.exports = router;

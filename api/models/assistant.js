@@ -40,5 +40,6 @@ Object.assign(assistantSchema.statics, {
     assistantPermissions
 });
 
+
 //Compile the schema into models
 module.exports = mongoose.model('Assistant', assistantSchema);

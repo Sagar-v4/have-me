@@ -4,7 +4,6 @@ const conn = require("./config/db");
 const helmet = require("helmet");
 const morgan = require("morgan");
 const app = express();
-require("./passport");
 
 // Routes
 const authRoute = require("./routes/auth");
@@ -38,7 +37,6 @@ app.use("/api/assistant", assistantRoute);
 app.use("/", (req, res) => {
     res.send("main haveMe-api");
 });
-
 
 
 //-----------------------server-----------------------

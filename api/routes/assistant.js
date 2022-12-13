@@ -31,4 +31,5 @@ router.get("/:id/all", getAssistants);
 // GET ALL EVENTS OF USER
 router.get("/:id/allEvents", getAllUserAssist);
 
+
 module.exports = router;

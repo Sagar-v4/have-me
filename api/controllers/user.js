@@ -121,6 +121,7 @@ const getUsers = async (req, res) => {
     }
 }
 
+
 module.exports = {
     updateUser,
     deleteUser,

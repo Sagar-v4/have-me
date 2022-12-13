@@ -31,4 +31,5 @@ router.get("/:id/user", getUserEvents);
 // GET ALL admin
 router.get("/:id/all", getEvents);
 
+
 module.exports = router;

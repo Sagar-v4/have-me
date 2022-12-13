@@ -12,6 +12,7 @@ import Event from "./pages/Event";
 import Profile from "./pages/Profile";
 import Assist from "./pages/Assist";
 import Presence from "./pages/Presence";
+import Download from "./pages/Download";
 
 import {Layout, Menu, message} from 'antd';
 import {CalendarOutlined, HistoryOutlined, ScheduleOutlined, LogoutOutlined, UserOutlined, DownloadOutlined} from '@ant-design/icons';
@@ -87,6 +88,9 @@ export default function App() {
                         <Route path={"/assist"}>
                             {user ? <Assist user={user}/> : <Redirect to={"/"}/>}
                         </Route>
+                        <Route path={"/download"}>
+                            {user ? <Download user={user}/> : <Redirect to={"/"}/>}
+                        </Route>
                     </Layout>
                 </Layout>
             </Switch>
@@ -94,3 +98,4 @@ export default function App() {
         </Router>
     );
 };
+

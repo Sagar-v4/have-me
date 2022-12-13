@@ -27,7 +27,7 @@ export default function Signup() {
         }
 
         try {
-            const res = await axios.post("https://haveme-api.herokuapp.com/api/auth/register", register);
+            const res = await axios.post("https://api-have-me.onrender.com/api/auth/register", register);
             message.success('Registration successful!');
             localStorage.setItem("user", JSON.stringify(res.data));
             window.location.reload();
@@ -155,3 +155,4 @@ export default function Signup() {
         </Form>
     );
 };
+

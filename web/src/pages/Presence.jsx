@@ -51,7 +51,7 @@ export default function Presence() {
 
     useEffect(() => {
         const fetchPresence = async () => {
-            const res = await axios.get("https://haveme-api.herokuapp.com/api/presence/" + user._id + "/user");
+            const res = await axios.get("https://api-have-me.onrender.com/api/presence/" + user._id + "/user");
             res.data.map(r => {
                 r.key = r._id;
                 r.name = r.event_id.name;
@@ -103,3 +103,4 @@ export default function Presence() {
         </>
     );
 };
+

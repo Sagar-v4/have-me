@@ -26,7 +26,7 @@ export default function Profile({navigation}) {
     const [profile, setProfile] = useState([]);
     const fetchUser = async () => {
         user = JSON.parse(await user);
-        const res = await axios.get("https://api-have-me.onrender.com/api/user/" + user);
+        const res = await axios.get("https://api-have-me-v1gc.onrender.com/api/user/" + user);
         setProfile(res.data);
     };
 

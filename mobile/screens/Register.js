@@ -23,7 +23,7 @@ export default function Register({ navigation }) {
                     "name": name,
                     "password": password
                 }
-                const res = await axios.post("https://api-have-me.onrender.com/api/auth/register", user);
+                const res = await axios.post("https://api-have-me-v1gc.onrender.com/api/auth/register", user);
                 await AsyncStorage.setItem('UserData', JSON.stringify(res.data._id));
                 navigation.navigate("Home");
             } catch (error) {

@@ -26,7 +26,7 @@ export default function Scan({ navigation }) {
                     text: "Yes",
                     onPress: async () => {
                         try {
-                            const res = await axios.post("https://api-have-me.onrender.com/api/presence/", {
+                            const res = await axios.post("https://api-have-me-v1gc.onrender.com/api/presence/", {
                                 "event_id": event._id,
                                 "user_id": user,
                             });
@@ -58,7 +58,7 @@ export default function Scan({ navigation }) {
         // setScanned(true);
         setEvent(null);
         try {
-            const res = await axios.get("https://api-have-me.onrender.com/api/event/" + QR + "/qr");
+            const res = await axios.get("https://api-have-me-v1gc.onrender.com/api/event/" + QR + "/qr");
             // res.data.map(r => {
             //     r.key = r._id;
             //     r.name = r.event_id.name;

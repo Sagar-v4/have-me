@@ -21,7 +21,7 @@ const createEvent = async (req, res) => {
 
         const code = newEvent.name + newEvent?.user_id + Date.now();
         const salt = await bcrypt.genSalt(10);
-        newEvent.code = await bcrypt.hash(code, salt);
+        newEvent.code = await bcrypt.hash(code, salt).replace('/','');
 
         newEvent.expire = moment.tz(newEvent.expire, "Asia/Calcutta|Asia/Kolkata");
         // newEvent.expire = new Date(req?.body?.expire);
@@ -88,7 +88,7 @@ const updateEventQR = async (req, res) => {
 
             const code = updateEvent.name + updateEvent?.user_id + Date.now();
             const salt = await bcrypt.genSalt(10);
-            req.body.code = await bcrypt.hash(code, salt);
+            req.body.code = await bcrypt.hash(code, salt).replace('/','');
 
             await Event.findByIdAndUpdate(
                 req.params.id,
